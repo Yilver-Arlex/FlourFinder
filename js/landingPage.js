@@ -17,10 +17,10 @@ function mostrarOcultarMenu() {
     }else {
         menu.classList.remove("opacity-100")
         menu.classList.add("opacity-0", "pointer-events-none")
+        btnMenu.classList.remove("bg-app-orange", "rounded-xl", "p-1", "text-white")
 
         setTimeout(() => {
             menu.classList.add("hidden")
-            btnMenu.classList.remove("bg-app-orange", "rounded-xl", "p-1", "text-white")
         }, 300)
     }
 }
