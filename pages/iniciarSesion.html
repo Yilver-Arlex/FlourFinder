@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap&subset=latin" media="print" onload="this.media='all'">
     <title>Iniciar Sesión</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -25,9 +26,11 @@
             --color-app-orange-hover: #D96B18;
             --color-app-primary: #D4A373;
             --color-app-skyn-color: #F5E0B7;
+            --color-app-gray:#BDC3C7;
+            --color-app-gray-hover:#A6ACAF;
             --color-app-skyn-color-hover: #E8CE9D;
 
-            --font-poppins-sans: "Poppins", sans-serif;
+            --font-poppins: "Poppins", system-ui, sans-serif;
         }
 
         @keyframes aparecer {
@@ -49,18 +52,22 @@
     </style>
 </head>
 
-<body class="font-poppins-sans bg-app-bg-principal">
+<body class="font-poppins bg-app-bg-principal">
     <main>
 
         <!--Iniciar Sesión-->
 
         <section id="section-registrarse" class="flex flex-col justify-center items-center min-h-screen py-10 px-2">
-            <div class="relative max-w-150 w-full flex flex-col justify-center items-center gap-16 sm:shadow-xl sm:rounded-4xl sm:py-15 sm:px-20 anim-entrada">
+            <div
+                class="relative max-w-150 w-full flex flex-col justify-center items-center gap-16 sm:shadow-xl sm:rounded-4xl sm:py-15 sm:px-20 anim-entrada">
                 <button class="absolute top-0 left-0 sm:top-5 sm:left-5 btn-back">
-                    <img class="w-12 hover:scale-105 transition cursor-pointer" src="../img/MuyUtilizadas/btn-atras.avif" alt="">
+                    <svg
+                        class="size-12 text-app-gray cursor-pointer hover:scale-105 hover:text-app-gray-hover transition-all">
+                        <use href="../assets/svg/icons.svg#icon-simple-back-arrow"></use>
+                    </svg>
                 </button>
                 <div class="flex flex-col gap-1 items-center justify-center">
-                    <img class="w-20 md:w-25" src="../img/MuyUtilizadas/FlourFinder.avif" alt="">
+                    <img class="w-20 md:w-25" src="../assets/img/MuyUtilizadas/FlourFinder.avif" alt="">
                     <h2 class="font-bold text-2xl md:text-3xl">Iniciar Sesión</h2>
                 </div>
                 <form class="flex flex-col justify-center items-center gap-5 w-full">
@@ -71,7 +78,7 @@
                             <span class="input-text-error"></span>
                         </div>
                         <input type="email"
-                            class="border-red-200 border-1 rounded-lg focus:ring-gray-500 focus:ring-2 focus:outline-none px-3 py-1.5 focus:scale-105 transition-transform"
+                            class="border-app-primary border-1 rounded-lg focus:ring-gray-500 focus:ring-2 focus:outline-none px-3 py-1.5 focus:scale-105 transition-transform"
                             id="email-up">
                     </div>
 
@@ -81,12 +88,14 @@
                             <span class="input-text-error"></span>
                         </div>
                         <input type="password"
-                            class="border-red-200 border-1 rounded-lg focus:ring-gray-500 focus:ring-2 focus:outline-none px-3 py-1.5 focus:scale-105 transition-transform"
+                            class="border-app-primary border-1 rounded-lg focus:ring-gray-500 focus:ring-2 focus:outline-none px-3 py-1.5 focus:scale-105 transition-transform"
                             id="password-up">
                         <a href="#" class="text-app-orange hover:text-app-orange-hover">¿Olvidaste tu contraseña?</a>
                     </div>
 
-                    <button class="mt-10 bg-app-skyn-color rounded-md py-2 px-5 hover:bg-app-skyn-color-hover hover:scale-105 transition hover:shadow-ms cursor-pointer">Iniciar Sesión</button>
+                    <button
+                        class="mt-10 bg-app-skyn-color rounded-md py-2 px-5 hover:bg-app-skyn-color-hover hover:scale-105 transition hover:shadow-sm cursor-pointer">Iniciar
+                        Sesión</button>
                 </form>
 
                 <div class="flex gap-5 items-center justify-center">
@@ -95,11 +104,15 @@
                     <div class="w-35 h-0.5 bg-app-primary"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-3">
-                    <button class="border-app-primary border-1 flex justify-center items-center gap-5 py-1.5 px-15 rounded-md hover:scale-105 hover:shadow-sm transition cursor-pointer">
-                        <img class="w-7" src="../img/registrarseEinicioDesesion/IconGoogleO.avif" alt="">
+                    <button
+                        class="border-app-primary border-1 flex justify-center items-center gap-5 py-1.5 px-15 rounded-md hover:scale-105 hover:shadow-sm transition cursor-pointer">
+                        <svg class="size-7">
+                            <use href="../assets/svg/icons.svg#icon-google"></use>
+                        </svg>
                         Iniciar con Google
                     </button>
-                    <p>¿Aun no tienes cuenta? <a class="text-app-orange hover:text-app-orange-hover transition" href="./registro.html">Crear Cuenta</a></p>
+                    <p>¿Aun no tienes cuenta? <a class="text-app-orange hover:text-app-orange-hover transition"
+                            href="./registro.html">Crear Cuenta</a></p>
                 </div>
             </div>
         </section>

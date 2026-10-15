@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts CDN - Poppins Variable Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,7 +23,7 @@
             --color-app-bg-footer: #2C2420;
             --color-app-text-principal: #2D1B14; 
             --color-app-white: #FFFAF0;
-            --color-app-white-hover: #FDF5E6;
+            --color-app-white-hover: #F5ECDD;
             --color-app-orange: #E67E22;
             --color-app-orange-hover: #D96B18;
             --color-app-primary: #D4A373;
@@ -30,7 +31,7 @@
             --color-app-skyn-color-hover: #E8CE9D;
             --color-app-gray-dark: #44413C;
 
-            --font-poppins-sans: "Poppins", sans-serif;
+            --font-poppins: "Poppins", system-ui, sans-serif;
         }
 
         @keyframes aparecer {
@@ -45,41 +46,45 @@
             }
         }
 
-        html {
-                scroll-behavior: smooth !important;
-        }
-
         .anim-entrada {
             opacity: 0;
             animation: aparecer 0.7s forwards;
         }
-
-
     </style>
 
 </head>
 
-<body class="text-app-text-principal font-poppins-sans bg-app-bg-principal">
+<body class="text-app-text-principal font-poppins bg-app-bg-principal">
 
     <!--Barra de navegación-->
 
     <header class="fixed w-full z-99">
         <nav
-            class="bg-app-bg-principal flex justify-between items-center px-16 w-full h-18 border-app-primary border-b-2 relative">
+            class="bg-app-bg-principal flex justify-between items-center px-10 sm:px-14 lg:px-16 w-full h-18 border-app-primary border-b-2 relative">
             <a href="#">
-                <img class="w-11 sm:w-12 md:w-13 lg:w-14 hover:scale-105 transition-transform anim-entrada"
-                    src="./img/MuyUtilizadas/FlourFinderLogo.avif" alt="">
+                <h2
+                    class="text-xl text-app-orange font-bold drop-shadow-2xl lg:hidden transition-all anim-entrada hover:scale-105">
+                    Flour<span class="text-app-primary">Finder</span></h2>
+                <img class="w-11 sm:w-12 md:w-13 lg:w-14 hover:scale-105 transition-transform anim-entrada lg:flex hidden"
+                    src="./assets/img/MuyUtilizadas/FlourFinderLogo.avif" alt="">
             </a>
-            <div id="opciones-nav" class="hidden opacity-0 pointer-events-none transition-all duration-300 ease-in-out absolute top-26 py-8 px-10 right-3 shadow-2xl bg-app-bg-principal rounded-2xl flex-col justify-center items-center md:flex md:static md:opacity-100 md:pointer-events-auto md:bg-transparent md:flex-row md:p-0 md:shadow-none md:gap-7">
-                <ul class="flex flex-col w-full gap-5 pb-5 md:flex-row md:items-center md:justify-evenly md:p-0 md:gap-7 text-center anim-entrada">
-                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav"><a href="#section-hero">Inicio</a></li>
-                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav" ><a href="#section-explora">Explorar</a></li>
-                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav" ><a href="#section-funciona">Cómo funciona</a></li>
-                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav" ><a href="#section-contactanos">Contacto</a></li>
+            <div id="opciones-nav"
+                class="hidden opacity-0 pointer-events-none transition-all duration-300 ease-in-out absolute top-26 py-8 px-10 right-3 shadow-2xl bg-app-bg-principal rounded-2xl flex-col justify-center items-center lg:flex lg:static lg:opacity-100 lg:pointer-events-auto lg:bg-transparent lg:flex-row lg:p-0 lg:shadow-none lg:gap-7">
+                <ul
+                    class="flex flex-col w-full gap-5 pb-5 lg:flex-row lg:items-center lg:justify-evenly lg:p-0 lg:gap-7 text-center anim-entrada">
+                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav"><a
+                            href="#section-hero">Inicio</a></li>
+                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav"><a
+                            href="#section-explora">Explorar</a></li>
+                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav"><a
+                            href="#section-funciona">Cómo funciona</a></li>
+                    <li class="hover:text-app-orange transition hover:scale-105 opcion-nav"><a
+                            href="#section-contactanos">Contacto</a></li>
                 </ul>
-                <div class="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-7 anim-entrada border-t-1 border-gray-300 pt-5 md:border-transparent md:flex-row md:justify-center md:items-center md:p-0">
+                <div
+                    class="flex flex-col gap-3 sm:gap-4 lg:gap-7 anim-entrada border-t-1 border-gray-300 pt-5 lg:border-transparent lg:flex-row lg:justify-center lg:items-center lg:p-0">
                     <a href="./pages/iniciarSesion.html"
-                        class="bg-app-white-color rounded-md px-4 py-2 hover:scale-105 hover:bg-app-white-hover transition-transform hover:shadow-sm text-center w-35">Iniciar
+                        class="bg-app-white-color rounded-md px-4 py-2 hover:scale-105 hover:bg-app-primary transition-transform hover:shadow-sm text-center w-35 hover:text-app-white">Iniciar
                         Sesion</a>
                     <a href="./pages/registro.html"
                         class="bg-app-orange text-app-white rounded-md px-4 py-2 hover:scale-105 hover:bg-app-orange-hover transition-transform hover:shadow-sm text-center w-35">Registrarse</a>
@@ -87,10 +92,10 @@
 
             </div>
 
-            <div id="btn-menu-lp" class="anim-entrada text-app-text-principal transition md:hidden">
-                <svg class="hover:scale-105 transition cursor-pointer"
-                    onclick="mostrarOcultarMenu()" xmlns="http://www.w3.org/2000/svg" width="34" height="34">
-                    <use href="./img/svg/icons.svg#icon-burger"></use>
+            <div id="btn-menu-lp" class="anim-entrada text-app-text-principal transition lg:hidden">
+                <svg class="hover:scale-105 transition cursor-pointer" onclick="mostrarOcultarMenu()"
+                    xmlns="http://www.w3.org/2000/svg" width="34" height="34">
+                    <use href="./assets/svg/icons.svg#icon-burger"></use>
                 </svg>
             </div>
         </nav>
@@ -101,37 +106,34 @@
         <!--Section Hero-->
 
         <section id="section-hero"
-            class="scroll-mt-20  relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[url('./img/landingPage/FondoPrincipal.avif')] bg-fixed bg-cover">
+            class="scroll-mt-20  relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[url('./assets/img/landingPage/FondoPrincipal.avif')] bg-fixed bg-cover">
 
-            <div class="bg-black/70 absolute inset-0"></div>
+            <div class="bg-black/75 absolute inset-0"></div>
 
             <div
-                class="w-full max-w-4xl p-10 flex flex-col items-center justify-center gap-15 text-center py-10 px-5 anim-entrada">
-                <h1 class="text-app-white text-shadow-2xs text-shadow-black font-bold text-3xl md:text-4xl lg:text-5xl">
-                    Todo lo
-                    que tu
-                    panaderia
-                    necesita, hecho con harina.</h1>
-                <p class="text-app-white text-shadow-2xs text-shadow-black">Conecta con las mejores panaderías,
+                class="w-full max-w-4xl p-10 flex flex-col items-center justify-center gap-15 text-center py-10 px-10 anim-entrada">
+                <h1 class="text-app-white drop-shadow-md font-bold text-3xl md:text-4xl lg:text-5xl">
+                    Todo lo que tu panaderia necesita, hecho con harina.</h1>
+                <p class="text-app-white drop-shadow-md">Conecta con las mejores panaderías,
                     reposterías y establecimientos de Garzón, Huila, y descubre productos de calidad cerca de ti.
                 </p>
                 <div
-                    class="text-app-white text-shadow-2xs text-shadow-black flex flex-wrap justify-evenly items-center gap-5 text-center w-full">
-                    <div class="flex justify-center items-center gap-9">
+                    class="text-app-white drop-shadow-md flex flex-wrap justify-evenly items-center gap-8 md:gap-10 text-center w-full">
+                    <div class="flex justify-center items-center gap-4 md:gap-7">
                         <svg class="text-app-primary size-17">
-                            <use href="./img/svg/icons.svg#icon-map-pin"></use>
+                            <use href="./assets/svg/icons.svg#icon-map-pin"></use>
                         </svg>
                         <p>Locales cercanos</p>
                     </div>
-                    <div class="flex justify-center items-center gap-9">
+                    <div class="flex justify-center items-center gap-5 md:gap-8">
                         <svg class="text-app-primary size-17">
-                            <use href="./img/svg/icons.svg#icon-check"></use>
+                            <use href="./assets/svg/icons.svg#icon-check"></use>
                         </svg>
                         <p>Productos de calidad</p>
                     </div>
-                    <div class="flex justify-center items-center gap-9">
+                    <div class="flex justify-center items-center gap-5 md:gap-8">
                         <svg class="text-app-primary size-17">
-                            <use href="./img/svg/icons.svg#icon-van"></use>
+                            <use href="./assets/svg/icons.svg#icon-van"></use>
                         </svg>
                         <p>Entrega rapida</p>
                     </div>
@@ -140,8 +142,8 @@
                     <a href="#"
                         class="bg-app-orange text-app-white py-3 px-5 rounded-md hover:shadow-sm hover:scale-105 hover:bg-app-orange-hover transition">Explorar
                         Panaderias</a>
-                    <a href="#"
-                        class="bg-app-white text-app-orange py-3 px-5 rounded-md hover:shadow-sm hover:scale-105 hover:bg-app-white-hover transition">Regristrarse
+                    <a href="./pages/registro.html"
+                        class="bg-app-white text-app-orange py-3 px-5 rounded-md hover:shadow-sm hover:scale-105 hover:bg-app-white-hover transition">Registrarse
                         Gratis</a>
                 </div>
 
@@ -150,36 +152,36 @@
 
         <!--Sección Explora-->
 
-        <section id="section-explora" class="scroll-mt-20 flex flex-col px-7 py-40 gap-30 justify-center items-center">
+        <section id="section-explora" class="scroll-mt-20 flex flex-col px-10 py-40 gap-30 justify-center items-center">
             <h2 class="text-3xl font-bold text-center anim-entrada">Encuentra lo que necesitas</h2>
             <div class="flex flex-wrap items-center justify-center gap-15 anim-entrada">
                 <div
-                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85">
-                    <img class="w-70" src="./img/landingPage/explora/PanLogo.avif" alt="">
+                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-80 px-5 py-10 hover:scale-105 transition h-80 gap-2">
+                    <img class="w-40" src="./assets/img/landingPage/explora/PanLogo.avif" alt="" loading="lazy">
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">Panes y repostería</h3>
                         <p>Variedad de panes y reposteria.</p>
                     </div>
                 </div>
                 <div
-                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85">
-                    <img class="w-70" src="./img/landingPage/explora/Tortalogo.avif" alt="">
+                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-80 px-5 py-10 hover:scale-105 transition h-80 gap-5">
+                    <img class="w-35" src="./assets/img/landingPage/explora/Tortalogo.avif" alt="" loading="lazy">
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">Postres</h3>
-                        <p>Todo para crear los mejores postres</p>
+                        <p>Todo para tus mejores postres.</p>
                     </div>
                 </div>
                 <div
-                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85">
-                    <img class="w-70" src="./img/landingPage/explora/EstablecimientoExploararimg.avif" alt="">
+                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-80 px-5 py-10 hover:scale-105 transition h-80 gap-2">
+                    <img class="w-40" src="./assets/img/landingPage/explora/EstablecimientoExploararimg.avif" alt="" loading="lazy">
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">Locales cercanos</h3>
                         <p>Panaderias y tiendas cerca de ti</p>
                     </div>
                 </div>
                 <div
-                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85">
-                    <img class="w-60" src="./img/landingPage/explora/MotoLogo.avif" alt="">
+                    class="border-1 border-app-primary rounded-xl flex flex-col justify-center items-center w-80 px-5 py-10 hover:scale-105 transition h-80 gap-2">
+                    <img class="w-40" src="./assets/img/landingPage/explora/MotoLogo.avif" alt="" loading="lazy">
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">Domicilios</h3>
                         <p>Recibe tus productos en casa</p>
@@ -191,13 +193,13 @@
         <!--Section ¿Como funciona?-->
 
         <section id="section-funciona"
-            class="scroll-mt-20 flex flex-col px-7 py-40 gap-30 justify-center items-center bg-app-bg-secondary text-center">
-            <h2 class="text-3xl font-bold text-center anim-entrada">¿Como Funciona FlourFInder?</h2>
-            <div class="flex flex-wrap items-center justify-center gap-15 anim-entrada">
+            class="scroll-mt-20 flex flex-col px-10 py-40 gap-30 justify-center items-center bg-app-bg-secondary text-center">
+            <h2 class="text-3xl font-bold text-center anim-entrada">¿Como Funciona FlourFinder?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-15">
                 <div
-                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal gap-4">
+                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal gap-4 hover:shadow-md">
                     <svg class="size-20 text-app-orange">
-                        <use href="./img/svg/icons.svg#icon-user-round"></use>
+                        <use href="./assets/svg/icons.svg#icon-user-round"></use>
                     </svg>
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">1. Registrate</h3>
@@ -205,9 +207,9 @@
                     </div>
                 </div>
                 <div
-                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal gap-4">
+                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal gap-4 hover:shadow-md">
                     <svg class="size-20 text-app-gray-dark" aria-hidden="true">
-                        <use href="./img/svg/icons.svg#icon-search"></use>
+                        <use href="./assets/svg/icons.svg#icon-search"></use>
                     </svg>
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">2. Busca</h3>
@@ -215,9 +217,9 @@
                     </div>
                 </div>
                 <div
-                    class="rounded-xl flex flex-col justify-center items-center gap-4 w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal">
+                    class="rounded-xl flex flex-col justify-center items-center gap-4 w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal hover:shadow-md">
                     <svg class="size-20 text-app-gray-dark" aria-hidden="true">
-                        <use href="./img/svg/icons.svg#icon-wheat"></use>
+                        <use href="./assets/svg/icons.svg#icon-wheat"></use>
                     </svg>
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">3. Explora</h3>
@@ -225,9 +227,9 @@
                     </div>
                 </div>
                 <div
-                    class="rounded-xl flex flex-col justify-center items-center gap-4 w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal">
+                    class="rounded-xl flex flex-col justify-center items-center gap-4 w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal hover:shadow-md">
                     <svg class="size-25 text-app-gray-dark" aria-hidden="true">
-                        <use href="./img/svg/icons.svg#icon-mouse-pointer"></use>
+                        <use href="./assets/svg/icons.svg#icon-mouse-pointer"></use>
                     </svg>
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">4. Pide</h3>
@@ -235,16 +237,20 @@
                     </div>
                 </div>
                 <div
-                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal">
-                    <img class="w-50" src="./img/landingPage/funcionamiento/check.avif" alt="">
+                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal gap-4 hover:shadow-md">
+                    <svg class="size-25 text-app-gray-dark" aria-hidden="true">
+                        <use href="./assets/svg/icons.svg#icon-circle-check-big"></use>
+                    </svg>
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">5. Confirma</h3>
                         <p>El local confirma tu solicitud</p>
                     </div>
                 </div>
                 <div
-                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal">
-                    <img class="w-50" src="./img/landingPage/funcionamiento/IconPastel.avif" alt="">
+                    class="rounded-xl flex flex-col justify-center items-center w-85 px-5 py-10 hover:scale-105 transition h-85 bg-app-bg-principal gap-4 hover:shadow-md">
+                    <svg class="size-25 text-app-gray-dark" aria-hidden="true">
+                        <use href="./assets/svg/icons.svg#icon-cake"></use>
+                    </svg>
                     <div class="flex flex-col items-center justify-center gap-3">
                         <h3 class="text-xl font-bold">6. Recibe</h3>
                         <p>El domiciliario recoge y entrega tu pedido</p>
@@ -256,18 +262,18 @@
         <!--Seccion Contactanos-->
 
         <section id="section-contactanos"
-            class="scroll-mt-20 py-30 px-10 flex flex-col justify-center items-center bg-app-bg-secondary pb-40">
+            class="scroll-mt-20 py-30 px-10 md:px-15 flex flex-col justify-center items-center bg-app-bg-secondary pb-40">
             <div
                 class="bg-app-bg-tertiary py-20 px-10 flex flex-wrap gap-15 rounded-lg justify-center items-center anim-entrada">
                 <div class="flex flex-col gap-7 justify-center items-center text-center">
                     <h2 class="text-2xl font-bold md:text-3xl">LLeva tu panadería al siguiente nivel</h2>
-                    <p>únete a FlourFinder y conecta con más clientes todos los días</p>
+                    <p>Únete a FlourFinder y conecta con más clientes todos los días</p>
                     <a href="#"
                         class="bg-app-orange hover:bg-app-orange-hover text-app-white py-2 px-3 rounded-md transition hover:scale-105 hover:shadow-sm">Contactanos</a>
                 </div>
                 <div class="flex justify-center items-center">
-                    <img class="w-70 sm:w-95 md:w-120 hover:scale-105 transition"
-                        src="./img/landingPage/contactanos/imgDispositivosFlourFinder.avif" alt="">
+                    <img class="w-70 sm:w-95 md:w-120 hover:scale-105 transition" loading="lazy"
+                        src="./assets/img/landingPage/contactanos/imgDispositivosFlourFinder.avif" alt="">
                 </div>
             </div>
         </section>
@@ -277,25 +283,48 @@
     <!--Footer-->
 
     <footer
-        class="bg-app-bg-footer w-full text-app-white flex flex-wrap items-center justify-center py-20 px-10 gap-20 text-center">
+        class="bg-app-bg-footer w-full text-app-white flex flex-wrap items-center justify-center py-20 px-10 md:px-20 gap-20 text-center">
         <div class="flex flex-col justify-center items-center gap-5 anim-entrada w-100">
-            <img class="w-20 hover:scale-y-105 transition-transform" src="./img/MuyUtilizadas/FlourFinder.avif" alt="">
+            <img class="w-20 hover:scale-y-105 transition-transform" src="./assets/img/MuyUtilizadas/FlourFinder.avif" alt="" loading="lazy">
             <p>únete a FlourFinder y conecta con más clientes todos los días</p>
         </div>
-        <div class="flex flex-col items-start justify-center anim-entrada">
+        <div class="flex flex-col items-start justify-center anim-entrada gap-3">
             <h3 class="font-bold text-lg">Contacto</h3>
             <div class="flex items-center justify-center gap-2">
-                <img class="w-12" src="./img/landingPage/footer/iconoGmail.avif" alt="">
+                <svg class="size-8">
+                    <use href="./assets/svg/icons.svg#icon-mail"></use>
+                </svg>
                 <p>FlourFinder@gmail.com</p>
             </div>
             <div class="flex items-center justify-center gap-2">
-                <img class="w-12" src="./img/landingPage/footer/iconTelefono.avif" alt="">
+                <svg class="size-8">
+                    <use href="./assets/svg/icons.svg#icon-phone"></use>
+                </svg>
                 <p>3232820443</p>
             </div>
             <div class="flex items-center justify-center gap-2">
-                <img class="w-12" src="./img/landingPage/footer/iconoUbicacion.avif" alt="">
+                <svg class="size-8">
+                    <use href="./assets/svg/icons.svg#icon-map-pin"></use>
+                </svg>
                 <p>Garzón, Huila-Colombia</p>
             </div>
+        </div>
+        <div class="text-app-white anim-entrada gap-3 flex flex-col items-start justify-center">
+            <h3 class="font-bold text-lg">Desarrolladores</h3>
+            <a href="https://github.com/Yilver-Arlex" target="_blank" rel="noreferrer"
+                class="flex items-center justify-center gap-2 hover:scale-105 transition-all hover:text-app-orange">
+                <svg class="size-10">
+                    <use href="./assets/svg/icons.svg#icon-github"></use>
+                </svg>
+                <p>Yilver Arlex Jovel Angarita</p>
+            </a>
+            <a href="https://github.com/rodriguezcalderonjosealejandro-cmd" target="_blank" rel="noreferrer"
+                class="flex items-center justify-center gap-2 hover:scale-105 transition-all hover:text-app-orange">
+                <svg class="size-10">
+                    <use href="./assets/svg/icons.svg#icon-github"></use>
+                </svg>
+                <p>Jose Alejandro Rodriguez Calderón</p>
+            </a>
         </div>
     </footer>
 </body>
